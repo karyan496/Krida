@@ -163,6 +163,10 @@ pip install -r requirements.txt
 
 ```bash
 streamlit run main.py
+
+#for venv
+python -m streamlit run main.py
+
 ```
 
 ---
