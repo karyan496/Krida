@@ -149,7 +149,7 @@ Allows easy installation of all required libraries.
 ### Step 1 – Clone the repository
 
 ```bash
-git clone https://github.com/your-username/krida.git
+git clone https://github.com/karyan496/krida.git
 cd krida
 ```
 
