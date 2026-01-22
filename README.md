@@ -184,16 +184,8 @@ cd krida
 
 ### Step 3 – Create Virtual Environment with Python 3.11.8 in VS Code
 
-1. **Open the project in VS Code:**
-   ```bash
-   code .
-   ```
-   (Or open VS Code and use File → Open Folder → select the `krida` folder)
 
-2. **Open the integrated terminal in VS Code:**
-   - Press `` Ctrl + ` `` (backtick) or go to `Terminal → New Terminal`
-
-3. **Create virtual environment using Python 3.11.8:**
+1. **Create virtual environment using Python 3.11.8:**
    
    **Windows:**
    ```bash
@@ -205,7 +197,7 @@ cd krida
    python3.11 -m venv venv
    ```
 
-4. **Activate the virtual environment:**
+2. **Activate the virtual environment:**
    
    **Windows (Command Prompt):**
    ```bash
