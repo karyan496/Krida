@@ -224,11 +224,6 @@ cd krida
 
    ✅ You should see `(venv)` appear at the beginning of your terminal prompt
 
-5. **Select Python interpreter in VS Code:**
-   - Press `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (macOS)
-   - Type "Python: Select Interpreter"
-   - Choose the interpreter from `venv` (should show Python 3.11.8)
-
 ---
 
 ### Step 4 – Install dependencies
@@ -256,23 +251,6 @@ python -m streamlit run main.py
 The application should open automatically in your default web browser at `http://localhost:8501`
 
 ---
-
-### 🔧 Troubleshooting
-
-**Issue:** `python: command not found` or wrong Python version
-- **Solution:** Make sure Python 3.11.8 is installed and added to PATH. Try using `py -3.11` (Windows) or `python3.11` (macOS/Linux)
-
-**Issue:** Virtual environment not activating
-- **Solution (Windows PowerShell):** Run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` then try activating again
-
-**Issue:** `pip: command not found`
-- **Solution:** Use `python -m pip install -r requirements.txt` instead
-
-**Issue:** Permission errors during installation
-- **Solution:** Make sure you're running the terminal as administrator (Windows) or use `sudo` (macOS/Linux) if necessary
-
----
-
 ## 🧑‍💻 How to Use
 
 1. Run the application
