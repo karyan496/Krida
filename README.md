@@ -146,28 +146,130 @@ Allows easy installation of all required libraries.
 
 ## ⚙ Installation
 
-### Step 1 – Clone the repository
+### Step 1 – Install Python 3.11.8
+
+1. **Download Python 3.11.8:**
+   - Visit the official Python downloads page: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+   - Navigate to the specific release: [Python 3.11.8](https://www.python.org/downloads/release/python-3118/)
+   - Download the appropriate installer for your operating system:
+     - **Windows:** `python-3.11.8-amd64.exe`
+     - **macOS:** `python-3.11.8-macos11.pkg`
+     - **Linux:** Download source or use package manager
+
+2. **Run the installer:**
+   - **Windows:**
+     - Double-click the downloaded `.exe` file
+     - ✅ **IMPORTANT:** Check the box "Add Python 3.11 to PATH"
+     - Click "Install Now" or choose "Customize installation" for advanced options
+     - Wait for installation to complete
+   - **macOS/Linux:**
+     - Follow the standard installation process for your OS
+
+3. **Verify installation:**
+   ```bash
+   python --version
+   ```
+   You should see: `Python 3.11.8`
+
+---
+
+### Step 2 – Clone the repository
 
 ```bash
 git clone https://github.com/karyan496/krida.git
 cd krida
 ```
 
-### Step 2 – Install dependencies
+---
+
+### Step 3 – Create Virtual Environment with Python 3.11.8 in VS Code
+
+1. **Open the project in VS Code:**
+   ```bash
+   code .
+   ```
+   (Or open VS Code and use File → Open Folder → select the `krida` folder)
+
+2. **Open the integrated terminal in VS Code:**
+   - Press `` Ctrl + ` `` (backtick) or go to `Terminal → New Terminal`
+
+3. **Create virtual environment using Python 3.11.8:**
+   
+   **Windows:**
+   ```bash
+   py -3.11 -m venv venv
+   ```
+   
+   **macOS/Linux:**
+   ```bash
+   python3.11 -m venv venv
+   ```
+
+4. **Activate the virtual environment:**
+   
+   **Windows (Command Prompt):**
+   ```bash
+   venv\Scripts\activate
+   ```
+   
+   **Windows (PowerShell):**
+   ```bash
+   venv\Scripts\Activate.ps1
+   ```
+   
+   **macOS/Linux:**
+   ```bash
+   source venv/bin/activate
+   ```
+
+   ✅ You should see `(venv)` appear at the beginning of your terminal prompt
+
+5. **Select Python interpreter in VS Code:**
+   - Press `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (macOS)
+   - Type "Python: Select Interpreter"
+   - Choose the interpreter from `venv` (should show Python 3.11.8)
+
+---
+
+### Step 4 – Install dependencies
+
+With the virtual environment activated, install all required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 3 – Run the application
+---
+
+### Step 5 – Run the application
 
 ```bash
 streamlit run main.py
-
-#for venv
-python -m streamlit run main.py
-
 ```
+
+Or if the above doesn't work:
+
+```bash
+python -m streamlit run main.py
+```
+
+The application should open automatically in your default web browser at `http://localhost:8501`
+
+---
+
+### 🔧 Troubleshooting
+
+**Issue:** `python: command not found` or wrong Python version
+- **Solution:** Make sure Python 3.11.8 is installed and added to PATH. Try using `py -3.11` (Windows) or `python3.11` (macOS/Linux)
+
+**Issue:** Virtual environment not activating
+- **Solution (Windows PowerShell):** Run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` then try activating again
+
+**Issue:** `pip: command not found`
+- **Solution:** Use `python -m pip install -r requirements.txt` instead
+
+**Issue:** Permission errors during installation
+- **Solution:** Make sure you're running the terminal as administrator (Windows) or use `sudo` (macOS/Linux) if necessary
 
 ---
 
